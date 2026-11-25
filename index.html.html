@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Upholding The Rohingya (UTR)</title>
+<link href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,500;7..72,700&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F6F8F7;--surface:#E8EFEC;--ink:#14272B;--muted:#4A5E61;--accent:#1F6F68;--mark:#E0A526;--on:#fff;--line:#C5D3CF;--hd:rgba(246,248,247,.96);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0F1D20;--surface:#172A2E;--ink:#EAF1EF;--muted:#A5B8B5;--accent:#5FC2B7;--mark:#E8B645;--on:#0F1D20;--line:#2A4044;--hd:rgba(15,29,32,.96)}}
+:root[data-theme="dark"]{--bg:#0F1D20;--surface:#172A2E;--ink:#EAF1EF;--muted:#A5B8B5;--accent:#5FC2B7;--mark:#E8B645;--on:#0F1D20;--line:#2A4044;--hd:rgba(15,29,32,.96)}
+html{scroll-padding-top:5rem;scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.65 "Public Sans",system-ui,sans-serif}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--hd);z-index:30}
+h1,h2,h3{font-family:Literata,Georgia,serif;line-height:1.15;margin:0}
+a{color:var(--accent)}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,summary:focus-visible{outline:3px solid var(--mark);outline-offset:3px}
+.wrap{max-width:1100px;margin:0 auto;padding:0 1.25rem}
+.ic{width:1.4em;height:1.4em;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;vertical-align:-.3em;flex:none}
+.bar{background:var(--accent);color:var(--on);font-size:.9rem}
+.bar .wrap{display:flex;flex-wrap:wrap;gap:.25rem 1.5rem;justify-content:space-between;padding-top:.45rem;padding-bottom:.45rem}
+.bar a{color:var(--on)}
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;background:var(--hd);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;gap:1rem;padding-top:.7rem;padding-bottom:.7rem}
+.brand{font:700 1.15rem Literata,Georgia,serif;text-decoration:none;color:var(--ink);margin-right:auto}
+.brand span{color:var(--accent)}
+nav{display:flex;gap:1.1rem}
+nav a{color:var(--ink);text-decoration:none;font-weight:500;font-size:.95rem;border-bottom:2px solid transparent;padding:.2rem 0}
+nav a:hover{border-color:var(--mark)}
+.btn{display:inline-flex;gap:.5rem;align-items:center;background:var(--accent);color:var(--on);padding:.75rem 1.3rem;border-radius:4px;text-decoration:none;font:600 1rem "Public Sans",sans-serif;border:2px solid var(--accent);cursor:pointer}
+.btn.alt{background:none;color:var(--ink);border-color:var(--ink)}
+.btn.sm{padding:.45rem .9rem;font-size:.9rem}
+.icon-btn{background:none;border:1px solid var(--line);color:var(--ink);border-radius:4px;padding:.4rem;cursor:pointer;display:inline-flex}
+select{background:var(--bg);color:var(--ink);border:1px solid var(--line);border-radius:4px;padding:.4rem;font:inherit;font-size:.9rem}
+#menu{display:none}
+@media (max-width:900px){#menu{display:inline-flex}nav{display:none;position:absolute;left:0;right:0;top:100%;flex-direction:column;background:var(--bg);padding:1rem 1.25rem;border-bottom:1px solid var(--line);gap:.6rem}nav.open{display:flex}.lang{display:none}}
+.hero{padding:4.5rem 0 3.5rem}
+.sun{display:block;width:5rem;height:.4rem;background:var(--mark);margin-bottom:1.5rem}
+.hero h1{font-size:clamp(2.4rem,7vw,4.5rem);max-width:15ch;letter-spacing:-.02em}
+.hero p{max-width:36rem;font-size:1.2rem;color:var(--muted);margin:1.4rem 0 2rem}
+.hero .btn{margin:0 .5rem .5rem 0}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(10rem,1fr));gap:1rem 2rem;border-top:1px solid var(--line);padding:1.5rem 0 0;margin-top:3rem}
+.stats b{display:block;font:700 2rem Literata,serif;color:var(--accent)}
+.stats span{color:var(--muted);font-size:.95rem}
+section{padding:4rem 0}
+section.tint{background:var(--surface)}
+h2{font-size:clamp(1.7rem,4vw,2.4rem);margin-bottom:.6rem}
+.sub{color:var(--muted);max-width:40rem;margin:0 0 2rem}
+.lead{max-width:42rem}
+.lead p{margin:0 0 1rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:2rem}
+.grid h3{font-size:1.2rem;margin:.6rem 0 .4rem}
+.grid p{margin:0;color:var(--muted)}
+.prog{border-top:3px solid var(--accent);padding-top:1rem}
+.prog .ic{width:2rem;height:2rem;color:var(--accent)}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(18rem,1fr));gap:2.5rem}
+.box{background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:1.25rem}
+.box h3{margin-top:0}
+.ph{background:var(--surface);border:1px dashed var(--muted);border-radius:6px;display:grid;place-items:center;color:var(--muted);font-size:.9rem;text-align:center;padding:1rem}
+.tint .ph{background:var(--bg)}
+.gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(11rem,1fr));gap:.75rem}
+.gal .ph{aspect-ratio:4/3}
+.news .ph{aspect-ratio:16/9;margin-bottom:.8rem}
+.news small{color:var(--muted)}
+.team .av{width:4.5rem;height:4.5rem;border-radius:50%;background:var(--accent);color:var(--on);display:grid;place-items:center;font:700 1.4rem Literata,serif;margin-bottom:.7rem}
+.logos{display:grid;grid-template-columns:repeat(auto-fit,minmax(9rem,1fr));gap:1rem}
+.logos .ph{height:4.5rem}
+blockquote{margin:0;padding-left:1.25rem;border-left:4px solid var(--mark);font:500 1.4rem/1.4 Literata,Georgia,serif;max-width:36rem}
+blockquote small{display:block;margin-top:.7rem;font:400 .95rem "Public Sans",sans-serif;color:var(--muted)}
+details{border-bottom:1px solid var(--line);padding:1rem 0}
+summary{cursor:pointer;font-weight:600}
+details p{margin:.7rem 0 0;color:var(--muted)}
+label{display:block;font-weight:500;margin:0 0 .9rem}
+input,textarea{width:100%;font:inherit;padding:.65rem;border:1px solid var(--line);border-radius:4px;background:var(--bg);color:var(--ink);margin-top:.3rem}
+.row{display:flex;gap:.6rem;flex-wrap:wrap}
+.row input{flex:1;min-width:12rem;margin:0}
+ul.plain{list-style:none;padding:0;margin:0}
+ul.plain li{display:flex;gap:.6rem;margin:.55rem 0;align-items:flex-start}
+.social{display:flex;gap:.6rem}
+.social a{color:var(--ink);border:1px solid var(--line);border-radius:50%;width:2.5rem;height:2.5rem;display:grid;place-items:center}
+footer{background:var(--ink);color:var(--bg);padding:3rem 0 1.5rem;font-size:.95rem}
+footer a{color:var(--bg)}
+footer .grid{gap:1.5rem}
+footer h3{font-size:1rem;margin-bottom:.6rem}
+footer .social a{color:var(--bg);border-color:var(--muted)}
+footer .copy{border-top:1px solid var(--muted);margin-top:2rem;padding-top:1rem;opacity:.85}
+#top-btn{position:fixed;right:1rem;bottom:calc(1rem + env(safe-area-inset-bottom,0px));z-index:50}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="book" viewBox="0 0 24 24"><path d="M2 4h7a3 3 0 013 3v13a2 2 0 00-2-2H2zM22 4h-7a3 3 0 00-3 3v13a2 2 0 012-2h8z"/></symbol>
+<symbol id="tree" viewBox="0 0 24 24"><path d="M12 22v-8M12 14c-4 0-7-3-7-8 5 0 7 3 7 8zM12 11c0-4 3-6 7-6 0 4-3 6-7 6z"/></symbol>
+<symbol id="heart" viewBox="0 0 24 24"><path d="M20.8 5.6a5.2 5.2 0 00-7.4 0L12 7l-1.4-1.4a5.2 5.2 0 00-7.4 7.4L12 21.7l8.8-8.7a5.2 5.2 0 000-7.4z"/></symbol>
+<symbol id="moon" viewBox="0 0 24 24"><path d="M21 13A9 9 0 1111 3a7 7 0 0010 10z"/></symbol>
+<symbol id="mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></symbol>
+<symbol id="phone" viewBox="0 0 24 24"><path d="M22 17v3a2 2 0 01-2 2A18 18 0 012 4a2 2 0 012-2h3l2 5-2 2a14 14 0 006 6l2-2z"/></symbol>
+<symbol id="pin" viewBox="0 0 24 24"><path d="M12 22s7-6.5 7-12a7 7 0 10-14 0c0 5.500 7 12 7 12z"/><circle cx="12" cy="10" r="2.500"/></symbol>
+<symbol id="users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.500"/><path d="M2 21a7 7 0 0114 0M16 4.500a3.500 3.500 0 010 7M22 21a7 7 0 00-4-6.300"/></symbol>
+<symbol id="cal" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></symbol>
+<symbol id="dl" viewBox="0 0 24 24"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 21h16"/></symbol>
+<symbol id="globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20"/></symbol>
+<symbol id="menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+<symbol id="theme" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 3v18" /><path d="M12 3a9 9 0 010 18z" fill="currentColor"/></symbol>
+<symbol id="up" viewBox="0 0 24 24"><path d="M12 19V5m-6 6l6-6 6 6"/></symbol>
+<symbol id="fb" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></symbol>
+<symbol id="yt" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="M10 9l5 3-5 3z"/></symbol>
+<symbol id="x" viewBox="0 0 24 24"><path d="M4 4l16 16M20 4L4 20"/></symbol>
+<symbol id="ig" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.500 6.500h.01"/></symbol>
+<symbol id="wa" viewBox="0 0 24 24"><path d="M3 21l1.700-5A9 9 0 118 19.300z"/></symbol>
+</defs></svg>
+
+<div class="bar"><div class="wrap"><span><svg class="ic"><use href="#pin"/></svg> Balukhali-2, Camp 12, Ukhiya, Cox’s Bazar, Bangladesh</span><span><a href="tel:+8801337655349">+880 1337 655349</a> · <a href="mailto:info.ak.rahim.shah@gmail.com">info.ak.rahim.shah@gmail.com</a></span></div></div>
+
+<header class="top"><div class="wrap">
+<a class="brand" href="#top">Upholding The Rohingya <span>UTR</span></a>
+<nav id="nav" aria-label="Main"><a href="#about">About</a><a href="#programs">Programs</a><a href="#impact">Impact</a><a href="#news">News</a><a href="#branches">Branches</a><a href="#team">Team</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></nav>
+<select class="lang" aria-label="Language"><option>English</option><option disabled>Burmese (soon)</option><option disabled>Rohingya (soon)</option></select>
+<button class="icon-btn" id="theme" aria-label="Switch light or dark theme"><svg class="ic"><use href="#theme"/></svg></button>
+<a class="btn sm" href="#donate"><svg class="ic"><use href="#heart"/></svg>Donate</a>
+<button class="icon-btn" id="menu" aria-label="Open menu" aria-expanded="false"><svg class="ic"><use href="#menu"/></svg></button>
+</div></header>
+
+<main id="top">
+<div class="wrap hero">
+<span class="sun" aria-hidden="true"></span>
+<h1>Education and rights for Rohingya refugees.</h1>
+<p>Upholding The Rohingya (UTR) is a youth-led organization in Rohingya Refugee Camp 12, Cox’s Bazar. We stand for the rights of Rohingya refugees and bring higher education into the camps.</p>
+<a class="btn" href="#donate"><svg class="ic"><use href="#heart"/></svg>Donate</a><a class="btn alt" href="#volunteer"><svg class="ic"><use href="#users"/></svg>Volunteer</a><a class="btn alt" href="#programs">Our programs</a>
+<div class="stats">
+<div><b>2026</b><span>Year founded</span></div>
+<div><b>4</b><span>Programs</span></div>
+<div><b>Camp 12</b><span>Ukhiya, Cox’s Bazar</span></div>
+<div><b>[ ]</b><span>People reached</span></div>
+</div></div>
+
+<section id="about" class="tint"><div class="wrap">
+<h2>About UTR</h2>
+<div class="two">
+<div class="lead">
+<p>More than one million Rohingya refugees live in Cox’s Bazar, Bangladesh, in the world’s largest refugee camp. The Rohingya are an ethnic minority denied citizenship in Myanmar, which has made them the world’s largest stateless population. Most arrived in 2017, fleeing persecution, large-scale violence and human rights violations.</p>
+<p>UTR was founded on 25 August 2026 by educated Rohingya youth at Balukhali-2, Camp 12, Ukhiya. Most learning in the camps is basic education provided by UNICEF. Many young Rohingya want to study further, so they can work for their people and one day return to their own land. UTR is committed to running education in the camps.</p>
+</div>
+<div>
+<div class="box"><h3>Mission</h3><p>To stand for the rights of Rohingya refugees and provide educational opportunity.</p></div><br>
+<div class="box"><h3>Vision</h3><p>Rohingya who return to Myanmar with full rights, citizenship, dignity and a safe return. [Edit as needed]</p></div><br>
+<div class="box"><h3>Values</h3><p>Education · Dignity · Community · Faith · Care for the environment. [Edit as needed]</p></div>
+</div></div></div></section>
+
+<section id="programs"><div class="wrap">
+<h2>Our programs</h2><p class="sub">Four projects serving the Rohingya community inside the camps.</p>
+<div class="grid">
+<div class="prog"><svg class="ic"><use href="#book"/></svg><h3>Education Project</h3><p>Higher education for Rohingya refugees, so they can work for their people and return to Myanmar with full rights, citizenship, dignity and a safe return.</p></div>
+<div class="prog"><svg class="ic"><use href="#tree"/></svg><h3>Climate Change Project</h3><p>Many families live on hills where plants have been cleared. We plant trees throughout the camps for fresher air and a safer place to live.</p></div>
+<div class="prog"><svg class="ic"><use href="#heart"/></svg><h3>Social Awareness Project</h3><p>Emotional support and advice on health, parenting and social behavior, and campaigns to stop gender-based violence and child marriage.</p></div>
+<div class="prog"><svg class="ic"><use href="#moon"/></svg><h3>Islamic Studies and Madrasa</h3><p>Islamic education and a madrasa for the Muslim community in the camps, a service no other organization currently provides.</p></div>
+</div></div></section>
+
+<section id="impact" class="tint"><div class="wrap">
+<h2>Our impact</h2><p class="sub">Add your real numbers here as the work grows.</p>
+<div class="grid">
+<div class="box"><b style="font:700 2.2rem Literata,serif;color:var(--accent)">[ ]</b><p>Students enrolled</p></div>
+<div class="box"><b style="font:700 2.2rem Literata,serif;color:var(--accent)">[ ]</b><p>Trees planted</p></div>
+<div class="box"><b style="font:700 2.2rem Literata,serif;color:var(--accent)">[ ]</b><p>Awareness sessions held</p></div>
+<div class="box"><b style="font:700 2.2rem Literata,serif;color:var(--accent)">[ ]</b><p>Madrasa learners</p></div>
+</div><br><br>
+<blockquote>[Add a quote from a student, parent or community member.]<small>Name, role</small></blockquote>
+</div></section>
+
+<section id="news"><div class="wrap">
+<h2>News and activities</h2><p class="sub">Updates, events and stories from the camp.</p>
+<div class="grid news">
+<article><div class="ph">Photo</div><small><svg class="ic"><use href="#cal"/></svg> [Date]</small><h3>[News title]</h3><p>[Short summary of the activity or event.]</p></article>
+<article><div class="ph">Photo</div><small><svg class="ic"><use href="#cal"/></svg> [Date]</small><h3>[News title]</h3><p>[Short summary of the activity or event.]</p></article>
+<article><div class="ph">Photo</div><small><svg class="ic"><use href="#cal"/></svg> [Date]</small><h3>[News title]</h3><p>[Short summary of the activity or event.]</p></article>
+</div>
+<h3 style="margin:3rem 0 1rem">Upcoming events</h3>
+<ul class="plain"><li><svg class="ic"><use href="#cal"/></svg><span>[Date] · [Event name] · [Place]</span></li><li><svg class="ic"><use href="#cal"/></svg><span>[Date] · [Event name] · [Place]</span></li></ul>
+</div></section>
+
+<section id="gallery" class="tint"><div class="wrap">
+<h2>Gallery</h2><p class="sub">Photos from classes, planting days and community sessions. Share photos only with the consent of the people in them.</p>
+<div class="gal"><div class="ph">Photo</div><div class="ph">Photo</div><div class="ph">Photo</div><div class="ph">Photo</div><div class="ph">Photo</div><div class="ph">Photo</div></div>
+</div></section>
+
+<section id="branches"><div class="wrap">
+<h2>Offices and branches</h2><p class="sub">Where UTR works.</p>
+<div class="grid">
+<div class="box"><h3><svg class="ic"><use href="#pin"/></svg> Head office</h3><p>Balukhali-2, Rohingya Refugee Camp 12, Ukhiya, Cox’s Bazar, Bangladesh<br><a href="tel:+8801337655349">+880 1337 655349</a></p></div>
+<div class="box"><h3><svg class="ic"><use href="#pin"/></svg> [Branch name]</h3><p>[Address]<br>[Phone]</p></div>
+<div class="box"><h3><svg class="ic"><use href="#globe"/></svg> [Branch or partner abroad]</h3><p>[Country and address]<br>[Email]</p></div>
+</div>
+<div class="ph" style="height:14rem;margin-top:2rem">Map placeholder: add an embedded map of the office here</div>
+</div></section>
+
+<section id="team" class="tint"><div class="wrap">
+<h2>Our team</h2><p class="sub">The people behind UTR.</p>
+<div class="grid team">
+<div><div class="av">AR</div><h3>Ak Rahim Shah</h3><p>Founder and funder</p></div>
+<div><div class="av">[ ]</div><h3>[Name]</h3><p>[Role]</p></div>
+<div><div class="av">[ ]</div><h3>[Name]</h3><p>[Role]</p></div>
+<div><div class="av">[ ]</div><h3>[Name]</h3><p>[Role]</p></div>
+</div></div></section>
+
+<section id="volunteer"><div class="wrap">
+<h2>Get involved</h2><p class="sub">There are several ways to stand with the Rohingya community through UTR.</p>
+<div class="grid">
+<div class="prog"><svg class="ic"><use href="#users"/></svg><h3>Volunteer</h3><p>Offer your skills in teaching, writing, translation, design or tree planting.</p><p><a href="mailto:info.ak.rahim.shah@gmail.com?subject=Volunteer%20with%20UTR">Email us to volunteer</a></p></div>
+<div class="prog"><svg class="ic"><use href="#globe"/></svg><h3>Partner with us</h3><p>Organizations, schools and funders working on similar goals are welcome.</p><p><a href="mailto:info.ak.rahim.shah@gmail.com?subject=Partnership%20with%20UTR">Email us about partnership</a></p></div>
+<div class="prog"><svg class="ic"><use href="#heart"/></svg><h3>Spread the word</h3><p>Share our work with your community and on social media.</p></div>
+</div></div></section>
+
+<section id="donate" class="tint"><div class="wrap lead">
+<h2>Donate</h2>
+<p>Your gift supports education, tree planting, social awareness and the madrasa in Camp 12.</p>
+<div class="box"><ul class="plain">
+<li><b>Bank:</b> [Bank name]</li><li><b>Account name:</b> [Account name]</li><li><b>Account number:</b> [Number]</li><li><b>Mobile payment:</b> [bKash or other number]</li><li><b>International transfer:</b> [SWIFT or other details]</li></ul></div>
+<p style="margin-top:1rem"><a class="btn" href="mailto:info.ak.rahim.shah@gmail.com?subject=Donation%20to%20UTR"><svg class="ic"><use href="#mail"/></svg>Ask about donating</a></p>
+</div></section>
+
+<section id="resources"><div class="wrap">
+<h2>Resources and reports</h2>
+<ul class="plain"><li><svg class="ic"><use href="#dl"/></svg><span>[Annual report (PDF)]</span></li><li><svg class="ic"><use href="#dl"/></svg><span>[Organization profile (PDF)]</span></li><li><svg class="ic"><use href="#dl"/></svg><span>[Child safeguarding policy (PDF)]</span></li></ul>
+<h3 style="margin:3rem 0 1rem">Partners and supporters</h3>
+<div class="logos"><div class="ph">Logo</div><div class="ph">Logo</div><div class="ph">Logo</div><div class="ph">Logo</div></div>
+</div></section>
+
+<section id="faq" class="tint"><div class="wrap lead">
+<h2>Frequently asked questions</h2>
+<details><summary>Who runs UTR?</summary><p>UTR was created by educated Rohingya youth in Balukhali-2, Camp 12, Ukhiya, Cox’s Bazar.</p></details>
+<details><summary>How can I volunteer?</summary><p>Email us with your skills and availability. We will reply with the next steps.</p></details>
+<details><summary>How can I donate?</summary><p>See the Donate section for payment details, or email us to ask.</p></details>
+<details><summary>[Add another question]</summary><p>[Add the answer here.]</p></details>
+</div></section>
+
+<section id="contact"><div class="wrap">
+<h2>Contact us</h2>
+<div class="two">
+<div>
+<ul class="plain">
+<li><svg class="ic"><use href="#pin"/></svg><span>Balukhali-2, Rohingya Refugee Camp 12, Ukhiya, Cox’s Bazar, Bangladesh</span></li>
+<li><svg class="ic"><use href="#phone"/></svg><a href="tel:+8801337655349">+880 1337 655349</a></li>
+<li><svg class="ic"><use href="#mail"/></svg><a href="mailto:info.ak.rahim.shah@gmail.com">info.ak.rahim.shah@gmail.com</a></li></ul>
+<p>Follow us</p>
+<div class="social"><a href="#" aria-label="Facebook"><svg class="ic"><use href="#fb"/></svg></a><a href="#" aria-label="YouTube"><svg class="ic"><use href="#yt"/></svg></a><a href="#" aria-label="X"><svg class="ic"><use href="#x"/></svg></a><a href="#" aria-label="Instagram"><svg class="ic"><use href="#ig"/></svg></a><a href="#" aria-label="WhatsApp"><svg class="ic"><use href="#wa"/></svg></a></div>
+</div>
+<div>
+<label>Your name<input id="cn" autocomplete="name"></label>
+<label>Your email<input id="ce" type="email" autocomplete="email"></label>
+<label>Message<textarea id="cm" rows="4"></textarea></label>
+<button class="btn" id="send"><svg class="ic"><use href="#mail"/></svg>Send message</button>
+<p style="font-size:.9rem;color:var(--muted)">This opens your email app with the message ready to send.</p>
+</div></div></div></section>
+
+<section class="tint" style="padding:2.5rem 0"><div class="wrap"><div class="row" style="align-items:center;justify-content:space-between"><div><h3>Get updates from UTR</h3><p style="margin:.3rem 0 0;color:var(--muted)">Enter your email to join our update list.</p></div><div class="row" style="flex:1;max-width:30rem"><input id="ne" type="email" placeholder="Your email" aria-label="Your email"><button class="btn" id="sub">Subscribe</button></div></div></div></section>
+</main>
+
+<footer><div class="wrap">
+<div class="grid">
+<div><h3>Upholding The Rohingya (UTR)</h3><p>Standing for the rights of Rohingya refugees and providing educational opportunity.</p></div>
+<div><h3>Quick links</h3><a href="#about">About</a><br><a href="#programs">Programs</a><br><a href="#news">News</a><br><a href="#donate">Donate</a><br><a href="#contact">Contact</a></div>
+<div><h3>Contact</h3>Camp 12, Ukhiya, Cox’s Bazar<br><a href="tel:+8801337655349">+880 1337 655349</a><br><a href="mailto:info.ak.rahim.shah@gmail.com">info.ak.rahim.shah@gmail.com</a></div>
+<div><h3>Follow</h3><div class="social"><a href="#" aria-label="Facebook"><svg class="ic"><use href="#fb"/></svg></a><a href="#" aria-label="YouTube"><svg class="ic"><use href="#yt"/></svg></a><a href="#" aria-label="Instagram"><svg class="ic"><use href="#ig"/></svg></a></div></div>
+</div>
+<div class="copy">© <span id="yr">2026</span> Upholding The Rohingya (UTR). All rights reserved. · [Privacy policy] · [Terms]</div>
+</div></footer>
+<a class="btn sm" id="top-btn" href="#top" aria-label="Back to top"><svg class="ic"><use href="#up"/></svg></a>
+<script>
+var E="info.ak.rahim.shah@gmail.com",$=function(i){return document.getElementById(i)};
+$("menu").onclick=function(){var o=$("nav").classList.toggle("open");this.setAttribute("aria-expanded",o)};
+$("nav").onclick=function(){this.classList.remove("open")};
+$("theme").onclick=function(){var r=document.documentElement,d=r.getAttribute("data-theme")==="dark"||(!r.getAttribute("data-theme")&&matchMedia("(prefers-color-scheme:dark)").matches);r.setAttribute("data-theme",d?"light":"dark")};
+$("send").onclick=function(){var b="Name: "+$("cn").value+"\nEmail: "+$("ce").value+"\n\n"+$("cm").value;location.href="mailto:"+E+"?subject="+encodeURIComponent("Message from UTR website")+"&body="+encodeURIComponent(b)};
+$("sub").onclick=function(){location.href="mailto:"+E+"?subject="+encodeURIComponent("Subscribe to UTR updates")+"&body="+encodeURIComponent("Please add this email to your update list: "+$("ne").value)};
+$("yr").textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
